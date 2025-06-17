@@ -18,5 +18,3 @@ jobs:
       run: npm install
     - name: Ejecutar pruebas
       run: npm test
-    - name: Ver entorno
-      run: echo "Entorno actual es: ${{ secrets.NODE_ENV }}"
