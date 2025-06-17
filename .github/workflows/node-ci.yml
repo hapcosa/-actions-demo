@@ -8,15 +8,15 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Clonar repositorio
-        uses: actions/checkout@v3
-      - name: Usar Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-      - name: Instalar dependencias
-        run: npm install
-      - name: Ejecutar pruebas
-        run: npm test
-      - name: Ver entorno
-        run: echo "Entorno actual: ${{ secrets.NODE_ENV }}"
+    - name: Clonar repositorio
+      uses: actions/checkout@v3
+    - name: Usar Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    - name: Instalar dependencias
+      run: npm install
+    - name: Ejecutar pruebas
+      run: npm test
+    - name: Ver entorno
+      run: echo "Entorno actual ${{ secrets.NODE_ENV }}"
